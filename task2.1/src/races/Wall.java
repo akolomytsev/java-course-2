@@ -7,15 +7,15 @@ public class Wall implements Obstacle{
     @Override
     public boolean take(Activity person) {
         if (person.getJumpLimit() > height) { //Проверяем, если getJumpLimit (число определяет возможность героя) больше length (сгенерированной высоты)
-            person.jump(height);
+            person.jump(height); // вызываем метод Wall в активности и передаем туда высоту
             return true; // препятствие преодолено
         }else {
-            return false;
+            return false; //если препятствие не преодолено
         }
     }
 
     @Override
     public String toString() {
         return "Wall {" + "height =" + height + '}';
-    }
+    }// Выводим в момент непреодоления препятствия (что именно не преодолели)
 }

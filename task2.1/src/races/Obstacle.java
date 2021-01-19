@@ -1,6 +1,6 @@
 package races;
 
-public interface Obstacle {// метод для определения возможности преодоления
+public interface Obstacle {// интерфейс для определения возможности преодоления препятствия и передает его в Survival
 
-    boolean take(Activity activity); // Выбирает каким образом преодолевается препятствие через Activity
+    boolean take(Activity activity); // Возвращает приодолено ли препятствие
 }

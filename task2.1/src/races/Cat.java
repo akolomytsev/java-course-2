@@ -1,13 +1,13 @@
 package races;
 
-public class Cat implements Activity { // Реализует метод Activity
+public class Cat implements Activity { // Реализует интерфейс Activity
 
-    private final String name; // объявленный переменный экземпляр класса
-    private static int counter = 0; // объявленный и инициализированный переменный экземпляр класса
+    private final String name; // объявленный экземпляр класса
+    private static int counter = 0; // объявленный и инициализированный экземпляр класса
 
     public Cat(){
         counter++; // правило изменения счетчика
-        name = "Cat#" + counter; //Объявляем имя Person и дописываем динамичный счетчик
+        name = "Cat#" + counter; // Присваеваем имя коту и дописываем динамический счетчик
     }
 
     @Override
@@ -35,10 +35,10 @@ public class Cat implements Activity { // Реализует метод Activity
     public void take(Obstacle... obstacles) { //
         for (Obstacle obstacle:obstacles){ // перемещаемся по всем препятствиям
             if (!obstacle.take(this)){ // Спрашиваем преодолено ли препятствие
-                System.out.println(obstacle + " cannot be taken by " + name); // Выводим если препятствие не преодолено
+                System.out.println(obstacle + " cannot be taken by " + name); // Выводим, если препятствие не преодолено
                 return;// Завершаем программу для этого персонижа
             }
         }
-        System.out.println("All obstacles was taken by " + name); // Выводим если все препятствия преодолени
+        System.out.println("All obstacles was taken by " + name); // Выводим если все препятствия преодолены
     }
 }
